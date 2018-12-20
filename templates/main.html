@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> "this will be an attempt" </title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+    
+<body>
+    
+    <h1>HELLO DARKNESS MY OLD FRIEND</h1>
+    
+    <div class="dropdown">
+        <button onclick="showElement('myDropdown')" class="dropbtn">
+            Dropdown
+        </button>
+            <div id="myDropdown" class="dropdown-content">
+                <button onclick="showElement('4d6k3')">
+                    4d6 drop lowest
+                </button>
+                <button onclick="showElement('3d6')">
+                    3d6 choose order
+                </button>
+                <button onclick="showElement('3d10')">
+                    3d10 drop lowest
+                </button>
+            </div>
+    </div>
+    
+    <div id="statsarray">
+        <table class="statsarray">
+            <tr>
+                <th>STR</th>
+                <th>DEX</th>
+                <th>CON</th>
+                <th>INT</th>
+                <th>WIS</th>
+                <th>CHA</th>
+            </tr>
+            <tr>
+                <td class="stat-val">0</td>
+                <td class="stat-val">0</td>
+                <td class="stat-val">0</td>
+                <td class="stat-val">0</td>
+                <td class="stat-val">0</td>
+                <td class="stat-val">0</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div>
+        <div id="4d6k3" class="certainrollinfo">
+            <h3>4d6 drop lowest info:</h3>
+            <p>Roll 4d6 and drop the lowest. Stats rolled in order.</p>
+            <p>Max: 18, Min: 3, Average: ~12.9</p>
+            <button onclick="roll4d6k3()" class="rollbutton">
+                Roll!
+            </button>
+        </div>
+
+        <div id="3d6" class="certainrollinfo">
+            <h3>3d6 choose order info:</h3>
+            <p>Roll 3d6 and assign values to stats in any order.</p>
+            <p>Max: 18, Min: 3, Average: 10.5</p>
+            <p>not implemented</p>
+            <button onclick="roll3d6()" class="rollbutton">
+                Roll!
+            </button>
+        </div>
+
+        <div id="3d10" class="certainrollinfo">
+            <h3>3d10 drop lowest info:</h3>
+            <p>Roll 3d10 and drop the lowest. Stats rolled in order.</p>
+            <p>Max: 20, Min: 2, Average: ~13.5</p>
+            <button onclick="roll3d10k2()" class="rollbutton">
+                Roll!
+            </button>
+        </div>
+    </div>
+
+    <script type=text/javascript src="{{ url_for('static', filename='scripts.js') }}"></script>
+    
+</body>
+</html>
